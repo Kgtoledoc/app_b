@@ -16,12 +16,24 @@ App B es el backend gRPC que procesa las imágenes recibidas de App A. Aplica tr
 ## Instalación
 
 1. Clona el repositorio:
-   git clone <URL_DEL_REPOSITORIO_APP_B>
-   cd app_b
+```bash
+git clone https://github.com/Kgtoledoc/app_b.git
+cd app_b
+
+```
+   
 2. Instala las dependencias:
-   pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
+
+```
+   
+
 3. Ejecuta la aplicación:
-   python app.py
+```bash
+python app.py
+
+```
 ## Despliegue
 App B se despliega en un clúster de Kubernetes. El despliegue se gestiona a través de AWS CodeBuild y Amazon EKS.
 
