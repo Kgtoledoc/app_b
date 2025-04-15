@@ -35,7 +35,7 @@ phases:
       - echo Pushing the Docker image...
       - docker push $ECR_REPO_URL:$TAG
       - echo Updating Kubernetes deployment...
-      - sed -i "s|<ECR_REPO_URL>/app-a:latest|$ECR_REPO_URL:$TAG|g" $K8S_DEPLOYMENT
+      - sed -i "s|<ECR_REPO_URL>/app-b:latest|$ECR_REPO_URL:$TAG|g" $K8S_DEPLOYMENT
       - kubectl get nodes
       - kubectl apply -f $K8S_DEPLOYMENT
       - kubectl apply -f k8s/service.yaml
